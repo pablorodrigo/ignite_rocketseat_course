@@ -15,11 +15,11 @@ const categoriesRoutes = Router();
 
 const upload = multer({ dest: "./tmp" });
 
-categoriesRoutes.post("/create", (request, response) => {
+categoriesRoutes.post("/", (request, response) => {
   return createCategoryController.handle(request, response);
 });
 
-categoriesRoutes.get("/list/all", (request, response) => {
+categoriesRoutes.get("/", (request, response) => {
   return listCategoriesController.handle(request, response);
 });
 
