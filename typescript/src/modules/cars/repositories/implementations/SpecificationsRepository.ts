@@ -3,7 +3,7 @@
  * Date: 2021/05/06
  * Time: 23:28
  */
-import { Specification } from "../../models/Specification";
+import { Specification } from "../../entities/Specification";
 import { ICreateCategoryDTO } from "../ICategoriesRepository";
 import {
   ICreateSpecificationDTO,

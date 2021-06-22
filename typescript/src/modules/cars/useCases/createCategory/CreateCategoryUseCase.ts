@@ -4,7 +4,6 @@
  * Time: 13:07
  */
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
-import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
 
 interface IRequest {
   name: string;
@@ -14,8 +13,8 @@ interface IRequest {
 class CreateCategoryUseCase {
   constructor(private categoriesRepository: ICategoriesRepository) {}
 
-  execute({ name, description }: IRequest): void {
-    const alreadyExist = this.categoriesRepository.findByName(name);
+  async execute({ name, description }: IRequest): Promise<void> {
+    const alreadyExist = await this.categoriesRepository.findByName(name);
 
     if (alreadyExist) {
       throw new Error("Name already exist");

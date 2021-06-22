@@ -3,7 +3,7 @@
  * Date: 2021/05/04
  * Time: 14:24
  */
-import { Category } from "../models/Category";
+import { Category } from "../entities/Category";
 import {
   ICategoriesRepository,
   ICreateCategoryDTO,

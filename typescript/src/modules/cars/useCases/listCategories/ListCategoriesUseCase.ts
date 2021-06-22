@@ -3,7 +3,7 @@
  * Date: 2021/05/19
  * Time: 23:25
  */
-import { Category } from "../../models/Category";
+import { Category } from "../../entities/Category";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 class ListCategoriesUseCase {
