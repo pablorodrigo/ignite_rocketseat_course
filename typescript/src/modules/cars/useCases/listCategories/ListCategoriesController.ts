@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { container } from "tsyringe";
 
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
@@ -9,10 +10,10 @@ import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
  * Time: 22:40
  */
 class ListCategoriesController {
-  constructor(private listCategoriesUseCase: ListCategoriesUseCase) {}
+  async handle(request: Request, response: Response): Promise<Response> {
+    const listCategoriesUseCase = container.resolve(ListCategoriesUseCase);
 
-  handle(request: Request, response: Response): Response {
-    const all = this.listCategoriesUseCase.execute();
+    const all = await listCategoriesUseCase.execute();
 
     return response.json(all).send();
   }

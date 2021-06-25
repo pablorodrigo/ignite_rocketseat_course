@@ -3,6 +3,8 @@
  * Date: 2021/05/06
  * Time: 23:25
  */
+import { inject, injectable } from "tsyringe";
+
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
 interface IRequest {
@@ -10,8 +12,12 @@ interface IRequest {
   description: string;
 }
 
+@injectable()
 class CreateSpecificationUseCase {
-  constructor(private specificationsRepository: ISpecificationsRepository) {}
+  constructor(
+    @inject("SpecificationsRepository")
+    private specificationsRepository: ISpecificationsRepository
+  ) {}
 
   execute({ name, description }: IRequest): void {
     const specificationAlreadyExist = this.specificationsRepository.findByName(

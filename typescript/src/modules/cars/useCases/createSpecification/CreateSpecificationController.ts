@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
+import { container } from "tsyringe";
 
-import { CreateSpecificationUseCase } from "./CreateSpecificationUseCase";
+import { CreateCategoryUseCase } from "../createCategory/CreateCategoryUseCase";
 
 /**
  * Created by Pablo Silva
@@ -8,12 +9,11 @@ import { CreateSpecificationUseCase } from "./CreateSpecificationUseCase";
  * Time: 15:07
  */
 class CreateSpecificationController {
-  constructor(private createSpecificationUseCase: CreateSpecificationUseCase) {}
-
   handle(request: Request, response: Response): Response {
     const { name, description } = request.body;
 
-    this.createSpecificationUseCase.execute({ name, description });
+    const createSpecificationUseCase = container.resolve(CreateCategoryUseCase);
+    createSpecificationUseCase.execute({ name, description });
 
     return response.status(201).send();
   }
