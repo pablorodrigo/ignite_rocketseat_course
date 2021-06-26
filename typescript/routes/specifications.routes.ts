@@ -12,6 +12,6 @@ const specificationsRoutes = Router();
 
 const createSpecificationController = new CreateSpecificationController();
 
-specificationsRoutes.post("/create", createSpecificationController.handle);
+specificationsRoutes.post("/", createSpecificationController.handle);
 
 export { specificationsRoutes };

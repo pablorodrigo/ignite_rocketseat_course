@@ -1,3 +1,4 @@
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
 /**
@@ -5,11 +6,16 @@ import { v4 as uuidV4 } from "uuid";
  * Date: 2021/05/06
  * Time: 23:19
  */
+@Entity("specifications")
 class Specification {
+  @PrimaryColumn()
   id?: string;
+  @Column()
   name: string;
+  @Column()
   description: string;
-  create_at: Date;
+  @CreateDateColumn()
+  created_at: Date;
 
   constructor() {
     if (!this.id) {
