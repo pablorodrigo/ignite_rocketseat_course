@@ -1,11 +1,11 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
-import { v4 as uuidV4 } from "uuid";
-
 /**
  * Created by Pablo Silva
  * Date: 2021/06/27
  * Time: 15:27
  */
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
+import { v4 as uuidV4 } from "uuid";
+
 @Entity("users")
 class User {
   @PrimaryColumn()

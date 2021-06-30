@@ -11,7 +11,8 @@ import { IUsersRepository } from "../../repositories/IUsersRepository";
 @injectable()
 class CreateUserUseCase {
   constructor(
-    @inject("UsersRepository") private usersRepository: IUsersRepository
+    @inject("UsersRepository")
+    private usersRepository: IUsersRepository
   ) {}
 
   async execute({
@@ -20,7 +21,7 @@ class CreateUserUseCase {
     email,
     password,
     driver_license,
-  }: ICreateUserDTO) {
+  }: ICreateUserDTO): Promise<void> {
     await this.usersRepository.create({
       name,
       username,
@@ -30,3 +31,5 @@ class CreateUserUseCase {
     });
   }
 }
+
+export { CreateUserUseCase };
