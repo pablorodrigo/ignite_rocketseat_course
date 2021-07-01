@@ -3,7 +3,7 @@
  * Date: 2021/06/27
  * Time: 18:45
  */
-import { hash } from "bcrypt";
+import {hash} from "bcryptjs";
 import { inject, injectable } from "tsyringe";
 
 import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
