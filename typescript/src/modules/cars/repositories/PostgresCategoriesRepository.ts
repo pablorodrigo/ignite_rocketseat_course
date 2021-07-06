@@ -3,6 +3,7 @@
  * Date: 2021/05/04
  * Time: 14:24
  */
+import { AppError } from "../../../errors/AppError";
 import { Category } from "../entities/Category";
 import {
   ICategoriesRepository,
@@ -11,7 +12,7 @@ import {
 
 class PostgresCategoriesRepository implements ICategoriesRepository {
   create({ name, description }: ICreateCategoryDTO): void {
-    throw new Error("Method not implemented");
+    throw new AppError("Method not implemented");
   }
 
   findByName(name: string): Category {
