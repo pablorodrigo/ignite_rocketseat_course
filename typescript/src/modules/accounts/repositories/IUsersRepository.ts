@@ -4,7 +4,7 @@
  * Time: 18:19
  */
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
-import { User } from "@modules/accounts/entities/User";
+import { User } from "@modules/accounts/infra/typeorm/entities/User";
 
 interface IUsersRepository {
   create(data: ICreateUserDTO): Promise<void>;

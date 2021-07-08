@@ -3,9 +3,9 @@
  * Date: 2021/07/07
  * Time: 14:08
  */
-import { AppError } from "@errors/AppError";
 import { CategoriesRepositoryInMemory } from "@modules/cars/repositories/inMemory/CategoriesRepositoryInMemory";
 import { CreateCategoryUseCase } from "@modules/cars/useCases/createCategory/CreateCategoryUseCase";
+import { AppError } from "@shared/errors/AppError";
 
 let createCategoryUseCase: CreateCategoryUseCase;
 let categoriesRepositoryInMemory: CategoriesRepositoryInMemory;

@@ -3,8 +3,8 @@
  * Date: 2021/05/04
  * Time: 14:24
  */
-import { AppError } from "../../../errors/AppError";
-import { Category } from "../entities/Category";
+import { AppError } from "../../../shared/errors/AppError";
+import { Category } from "../infra/typeorm/entities/Category";
 import {
   ICategoriesRepository,
   ICreateCategoryDTO,

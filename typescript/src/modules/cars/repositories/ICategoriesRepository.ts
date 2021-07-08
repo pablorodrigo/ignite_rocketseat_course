@@ -3,7 +3,7 @@
  * Date: 2021/05/04
  * Time: 14:22
  */
-import { Category } from "@modules/cars/entities/Category";
+import { Category } from "@modules/cars/infra/typeorm/entities/Category";
 
 interface ICreateCategoryDTO {
   name: string;

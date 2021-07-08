@@ -3,7 +3,7 @@
  * Date: 2021/07/07
  * Time: 14:14
  */
-import { Category } from "@modules/cars/entities/Category";
+import { Category } from "@modules/cars/infra/typeorm/entities/Category";
 import {
   ICategoriesRepository,
   ICreateCategoryDTO,
