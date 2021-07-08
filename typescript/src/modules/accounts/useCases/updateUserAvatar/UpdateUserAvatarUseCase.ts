@@ -3,10 +3,9 @@
  * Date: 2021/07/06
  * Time: 10:43
  */
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
+import { deleteFile } from "@utils/file";
 import { inject, injectable } from "tsyringe";
-
-import { deleteFile } from "../../../../utils/file";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
 
 interface IRequest {
   user_id: string;

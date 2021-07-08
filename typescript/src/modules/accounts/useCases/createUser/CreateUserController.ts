@@ -3,10 +3,9 @@
  * Date: 2021/06/27
  * Time: 18:46
  */
+import { CreateUserUseCase } from "@modules/accounts/useCases/createUser/CreateUserUseCase";
 import { Request, Response } from "express";
 import { container } from "tsyringe";
-
-import { CreateUserUseCase } from "./CreateUserUseCase";
 
 class CreateUserController {
   async handle(request: Request, response: Response): Promise<Response> {

@@ -3,11 +3,10 @@
  * Date: 2021/06/27
  * Time: 18:24
  */
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { User } from "@modules/accounts/entities/User";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 import { getRepository, Repository } from "typeorm";
-
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { User } from "../../entities/User";
-import { IUsersRepository } from "../IUsersRepository";
 
 class UsersRepository implements IUsersRepository {
   private repository: Repository<User>;

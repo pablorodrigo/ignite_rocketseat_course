@@ -3,11 +3,11 @@
  * Date: 2021/07/07
  * Time: 14:14
  */
-import { Category } from "../../entities/Category";
+import { Category } from "@modules/cars/entities/Category";
 import {
   ICategoriesRepository,
   ICreateCategoryDTO,
-} from "../ICategoriesRepository";
+} from "@modules/cars/repositories/ICategoriesRepository";
 
 class CategoriesRepositoryInMemory implements ICategoriesRepository {
   categories: Category[] = [];

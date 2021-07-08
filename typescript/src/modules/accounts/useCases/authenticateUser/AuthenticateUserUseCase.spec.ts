@@ -3,12 +3,11 @@
  * Date: 2021/07/07
  * Time: 17:20
  */
-
-import { AppError } from "../../../../errors/AppError";
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { UsersRepositoryInMemory } from "../../repositories/inMemory/UsersRepositoryInMemory";
-import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
-import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
+import { AppError } from "@errors/AppError";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { UsersRepositoryInMemory } from "@modules/accounts/repositories/inMemory/UsersRepositoryInMemory";
+import { AuthenticateUserUseCase } from "@modules/accounts/useCases/authenticateUser/AuthenticateUserUseCase";
+import { CreateUserUseCase } from "@modules/accounts/useCases/createUser/CreateUserUseCase";
 
 let authenticateUserUseCase: AuthenticateUserUseCase;
 let usersRepositoryInMemory: UsersRepositoryInMemory;

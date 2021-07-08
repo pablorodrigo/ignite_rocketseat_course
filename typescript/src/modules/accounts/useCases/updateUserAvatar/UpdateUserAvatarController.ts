@@ -3,10 +3,9 @@
  * Date: 2021/07/06
  * Time: 10:48
  */
+import { UpdateUserAvatarUseCase } from "@modules/accounts/useCases/updateUserAvatar/UpdateUserAvatarUseCase";
 import { Request, Response } from "express";
 import { container } from "tsyringe";
-
-import { UpdateUserAvatarUseCase } from "./UpdateUserAvatarUseCase";
 
 class UpdateUserAvatarController {
   async handle(request: Request, response: Response): Promise<Response> {
