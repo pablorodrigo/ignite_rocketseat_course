@@ -30,7 +30,7 @@ describe("create category", () => {
       category.name
     );
 
-    console.log(categoryCreated);
+    // console.log(categoryCreated);
 
     expect(categoryCreated).toHaveProperty("id");
   });
