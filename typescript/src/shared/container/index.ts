@@ -3,6 +3,7 @@
  * Date: 2021/06/25
  * Time: 15:02
  */
+
 import { container } from "tsyringe";
 
 import { UsersRepository } from "@modules/accounts/infra/typeorm/repositories/UsersRepository";
@@ -32,4 +33,5 @@ container.registerSingleton<IUsersRepository>(
   UsersRepository
 );
 
+// ICarsRepository
 container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);
