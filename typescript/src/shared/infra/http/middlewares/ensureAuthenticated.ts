@@ -31,7 +31,7 @@ export async function ensureAuthenticated(
       "03a0675552249ae512247c1d03656742"
     ) as IPayload;
 
-    console.log(userId);
+    // console.log(userId);
 
     const usersRepository = new UsersRepository();
 
