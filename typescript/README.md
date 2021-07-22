@@ -59,3 +59,17 @@
 - Rent must last 24h
 - It should not be possible do register a new rent if user already has a car rented 
 - It should not be possible to register a new rent if car is already rented
+- User should be logged to rent a car
+- After rent a car, car's status should be altered to unavailable
+
+# Return of the rental car
+
+**RF**
+- It should be possible to register a new return of a car
+
+**RN**
+- If the return time is more than 24 hours, it should be charged daily price
+- After return the car, it should be released
+- After return the car, user should be released
+- If the return time is mora than expected time, it should be charged a fine proportional to the amount of time delayed.
+- If there is a fine, it should be added to the total rent. 
