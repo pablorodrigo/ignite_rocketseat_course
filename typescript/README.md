@@ -73,3 +73,11 @@
 - After return the car, user should be released
 - If the return time is mora than expected time, it should be charged a fine proportional to the amount of time delayed.
 - If there is a fine, it should be added to the total rent. 
+
+# List of rental
+
+**RF**
+- It should be possible to find all rental for an user
+
+**RN**
+- User should be logged
