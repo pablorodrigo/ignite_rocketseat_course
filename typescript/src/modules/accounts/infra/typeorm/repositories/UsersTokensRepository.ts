@@ -2,7 +2,9 @@
  * Created by Pablo Silva
  * Date: 2021/07/25
  * Time: 14:26
- */ import { getRepository, Repository } from "typeorm";
+ */
+
+import { getRepository, Repository } from "typeorm";
 
 import { ICreateUserTokenDTO } from "@modules/accounts/dtos/ICreateUserTokenDTO";
 import { UserTokens } from "@modules/accounts/infra/typeorm/entities/UserTokens";
@@ -45,6 +47,12 @@ class UsersTokensRepository implements IUsersTokensRepository {
 
   async deleteById(id: string): Promise<void> {
     await this.respository.delete(id);
+  }
+
+  async findByRefreshToken(refresh_token: string): Promise<UserTokens> {
+    const userToken = await this.respository.findOne({ refresh_token });
+
+    return userToken;
   }
 }
 

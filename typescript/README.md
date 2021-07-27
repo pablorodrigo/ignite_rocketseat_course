@@ -81,3 +81,14 @@
 
 **RN**
 - User should be logged
+
+# Password Recovery
+
+**RF**
+- It should be possible to recovery a password by email
+- User should receive an email with step by step how to recovery the password
+- User should be possible to set a new password
+
+**RN**
+- User must insert a new password
+- Link sent by email should be expired in 3 hours
