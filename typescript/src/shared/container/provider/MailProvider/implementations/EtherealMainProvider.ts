@@ -19,7 +19,7 @@ class EtherealMainProvider implements IMailProvider {
     nodemailer
       .createTestAccount()
       .then((account) => {
-        const transporter = nodemailer.createTransport({
+        this.client = nodemailer.createTransport({
           host: account.smtp.host,
           port: account.smtp.port,
           secure: account.smtp.secure,
@@ -28,8 +28,6 @@ class EtherealMainProvider implements IMailProvider {
             pass: account.pass,
           },
         });
-
-        this.client = transporter;
       })
       .catch((err) => console.error(err));
   }
