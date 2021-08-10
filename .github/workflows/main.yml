@@ -39,4 +39,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: "., !node_modules"
-          target: "~/projects/ignite_rocketseat_course/typescript"
+          target: "~/projects/"
