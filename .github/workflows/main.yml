@@ -32,9 +32,11 @@ jobs:
           
       - name: Install Dependencies
         run: yarn
+        working-directory: typescript
         
       - name: Build
         run: yarn build
+        working-directory: typescript
         
       - uses: appleboy/scp-action@master
         with:
@@ -42,5 +44,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
-          source: "typescript/, !node_modules"
+          source: "., !node_modules"
           target: "test"
